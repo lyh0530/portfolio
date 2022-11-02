@@ -8,8 +8,9 @@
 :root{
     --color-white: #ffffff;
     --color-black: #000000;
-    --color-beige: #f4f4f4;
+    --color-beige: #ddcbc6;
     --color-pink: #f39bc0;
+    --color-brown: #a52a2a;
 
     --font-large: 48px;
     --font-medium: 28px;
@@ -43,7 +44,7 @@ li{
 }
 
 button{
-    background-color: turquoise;
+    background-color: var(--color-brown);
     cursor: pointer;
     border: none;
     outline: none;
@@ -78,7 +79,7 @@ p{
     justify-content: space-between;   /*수평정렬 */
     align-items: center;
     padding: 16px;
-    background-color: var(--color-black);
+    background-color: var(--color-brown);
 }
 
 .navbar__logo{
@@ -104,7 +105,7 @@ p{
 }
 
 .navbar__menu__item:hover{
-    background-color: var(--color-pink);
+    background-color: var(--color-beige);
     border-radius: var(--size-border-radius);
 }
 
@@ -144,4 +145,41 @@ color: var(--color-white);
     padding: 8px 12px;
     border: 2px solid var(--color-white);
     border-radius: var(--size-border-radius);
+}
+
+.section {
+    padding: 50px;
+    text-align: center;
+    margin: auto;
+}
+
+.section__container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.about__majors{
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+}
+
+.major__icon{
+    width: 170px;
+    height: 170px;
+    line-height: 170px;
+    font-size: 70px;
+    margin: auto;
+    color: var(--color-pink);
+    border: 1px solid var(--color-pink);
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.major__icon i{
+    transition: all var(--animation-duration) ease;
+}
+.major__icon:hover{
+    color: var(--color-pink);
+    transform: rotate(-30deg) scale(1.1);
 }
