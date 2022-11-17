@@ -99,6 +99,7 @@ p{
 
 .navbar__menu{
     display: flex;
+    margin: 0;
 }
 
 .navbar__menu__item{
@@ -106,16 +107,17 @@ p{
     margin: 0 4px;
     color: var(--color-white);
     cursor: pointer;
+    /* border: 1px solid transparent; */
+    border-radius: var(--size-border-radius);
 }
 
 .navbar__menu__item.active{
-    border: 1px solid white;
-    border-radius: var(--size-border-radius);
+    border: 1px solid var(--color-white);
 }
 
 .navbar__menu__item:hover{
     background-color: var(--color-beige);
-    border-radius: var(--size-border-radius);
+    border-color: var(--color-white);
 }
 
 .navbar__toggle-btn{
@@ -126,6 +128,7 @@ p{
     color: var(--color-white);
     display: none;
 }
+
 
 /* 홈 */
 
@@ -154,6 +157,9 @@ color: var(--color-white);
     padding: 8px 12px;
     border: 2px solid var(--color-white);
     border-radius: var(--size-border-radius);
+}
+.home__contact:hover{
+    background-color: var(--color-beige);
 }
 /* section 공통*/
 .section {
@@ -293,12 +299,12 @@ color: var(--color-gray);
     color: var(--color-white);
 }
 
-.category__btn.active, .category__btn:hover{
+.category__btn.selected, .category__btn:hover{
     background-color: var(--color-pink);
     color: var(--color-white);
 }
 
-.category__btn.active .category__count,
+.category__btn.selected .category__count,
 .category__btn:hover .category__count{
     opacity: 1;
     top: 0;
@@ -325,6 +331,13 @@ color: var(--color-gray);
     justify-content: center;
 }
 
+.work__projects.anim-out{
+    opacity: 0;
+    transform: scale(0.96) translateY(40px);
+}
+.project.invisible{
+    display: none;
+}
 .project{
     position: relative;
     display: flex;
@@ -478,6 +491,9 @@ color: var(--color-gray);
         display: none;
     }
 
+    .navbar__menu.open{
+        display: block;
+    }
     .about__majors{
         flex-direction: column;
     }
